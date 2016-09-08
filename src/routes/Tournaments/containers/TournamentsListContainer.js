@@ -6,7 +6,7 @@ import { addTournament } from '../modules/tournaments'
     wiring in the actions and state necessary to render a presentational
     component - in this case, the counter:   */
 
-import TournamentsList from '../components/TournamentsList'
+import TournamentsContainer from '../components/TournamentsContainer'
 
 /*  Object of action creators (can also be function that returns object).
     Keys will be passed as props to presentational components. Here we are
@@ -17,7 +17,7 @@ const mapDispatchToProps = {
 }
 
 const mapStateToProps = (state) => ({
-    tournaments : state.tournaments
+    tournaments : state.tournaments.tournaments
 })
 
 
@@ -35,4 +35,4 @@ const mapStateToProps = (state) => ({
     Selectors are composable. They can be used as input to other selectors.
     https://github.com/reactjs/reselect    */
 
-export default connect(mapStateToProps, mapDispatchToProps)(TournamentsList)
+export default connect(mapStateToProps, mapDispatchToProps)(TournamentsContainer)
