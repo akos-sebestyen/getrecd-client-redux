@@ -27,7 +27,7 @@ export const doubleAsync = () => {
       setTimeout(() => {
         dispatch(increment(getState().counter))
         resolve()
-      }, 200)
+      }, 5000)
     })
   }
 }

@@ -25,7 +25,6 @@ const ACTION_HANDLERS = {
   [ADD_TOURNAMENT] : (state, action) => {
     state.tournamentCount++;
     state.tournaments = state.tournaments.concat(Object.assign({}, action.payload, {id:state.tournamentCount++}));
-    console.log(state);
     return state;
   } 
 }
